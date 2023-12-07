@@ -40,21 +40,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var membersLink = document.getElementById("members-link");
-  var buttonSound = document.getElementById("buttonSound");
-
-  // Function to play the sound
-  function playSound() {
-    if (buttonSound.paused) {
-      buttonSound.play();
-    } else {
-      buttonSound.currentTime = 0;
-    }
-  }
-
-  // Adding click event listener to the "Members" link
-  membersLink.addEventListener("click", playSound);
-});
