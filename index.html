@@ -17,12 +17,12 @@
 }
 		
     .custom-cursor {
-      position: fixed;
+      position: absolute;
       width: 61px; 
       height: 48px;
       pointer-events: none; 
       z-index: 9999; 
-	  transform: translate(30%, 30%);
+	  transform: translate(0%, 0%);
       background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/24db3350-15d9-4dd5-a9f3-988d171ecdb9/d9ihd70-76c395c9-a555-405c-9286-d627dc9ff634.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI0ZGIzMzUwLTE1ZDktNGRkNS1hOWYzLTk4OGQxNzFlY2RiOVwvZDlpaGQ3MC03NmMzOTVjOS1hNTU1LTQwNWMtOTI4Ni1kNjI3ZGM5ZmY2MzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iXZY04Fv8fZST-fFnwfad1PDhpHFXsfMQkiRy_ke9O8'); 
       background-size: cover;
       background-repeat: no-repeat;
@@ -35,7 +35,7 @@
             background-size: cover;
             font-family: 'Poppins', sans-serif;
 			cursor: none !important;
-			display: flex;
+			display: grid;
 			flex-wrap: wrap;
         }
         .container {
@@ -91,6 +91,8 @@
     top: 50%;
     left: 7px; 
     transform: translateY(-63%);
+		cursor: none;
+
 } 
         .content {
             margin-top: 100px;
@@ -107,7 +109,7 @@
     font-weight: bold; 
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); 
 				cursor: none;
-
+    text-align: center;
 			
 }
 
@@ -339,6 +341,15 @@ ul li a:hover {
 .container h1 img {
     pointer-events: none;
 }		
+	
+.transition-effect {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show-content {
+    opacity: 1;
+}	
 		
     </style>
 </head>
@@ -356,7 +367,7 @@ ul li a:hover {
         </ul>
 </div>
 
-    <div class="content">
+    <div class="content transition-effect">
         <h1>The Fourth Group</h1>
         <p class="custom-font bigger-text content-text">
 Hey there! Ready to explore how social media connects with school life at APEC Schools? Come check out how it helps students learn better and makes the whole studying experience more exciting!</p>
@@ -414,9 +425,19 @@ Hey there! Ready to explore how social media connects with school life at APEC S
 	<p class="container-text">	
 	<a href="https://www.deviantart.com/yuitea" target="_blank" class="new-tab-link">deviantart.com/yuitea</a>
 	</p>	
+		
+	<p class="container-text">
+	<a href="https://www.deviantart.com/6vcr" target="_blank" class="new-tab-link">deviantart.com/6vcr</a>
+    </p>
+		
+	<p class="container-text">
+	<a href="https://www.pinterest.ph/pin/25403185390342538/" target="_blank" class="new-tab-link">pinterest/palerosies</a>
+    </p>	
+		
 	</i>
 	
 </div>
+
 
 <script src="scripts.js"></script>
 
