@@ -29,14 +29,41 @@ function goToAboutUsPage() {
     window.location.href = "aboutus.html"; 
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  const cursor = document.createElement('div');
-  cursor.classList.add('custom-cursor');
-  document.body.appendChild(cursor);
+function goToHomepage() {
+    window.location.href = "index.html"; 
+}
 
-  document.addEventListener('mousemove', function(e) {
-    cursor.style.left = e.pageX - cursor.offsetWidth / 2 + 'px';
-    cursor.style.top = e.pageY - cursor.offsetHeight / 2 + 'px';
+document.addEventListener('DOMContentLoaded', function () {
+    const cursor = document.createElement('div');
+    cursor.classList.add('custom-cursor');
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', function (e) {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
   });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const contentText = document.querySelector('.content-text');
+    contentText.classList.remove('hidden');
 });
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const content = document.querySelector('.content');
+
+  function showContent() {
+    content.classList.add('show-content');
+  }
+
+  showContent();
+});
+
+
+
+
+
+ 
