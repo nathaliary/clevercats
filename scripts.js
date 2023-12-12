@@ -63,7 +63,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 
+window.onscroll = function() {
+  var btn = document.getElementById('backToTopBtn');
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.display = 'block';
+  } else {
+    btn.style.display = 'none';
+  }
+};
 
 
  
