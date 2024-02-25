@@ -350,10 +350,31 @@ ul li a:hover {
 .show-content {
     opacity: 1;
 }	
-		
+
+  /* live: screen */
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+}
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+    
     </style>
 </head>
 <body>
+
+<div class="video-container">
+    <iframe src="https://www.youtube.com/live/t6x5Qnqq2ug?si=F3etQMsjrYdj2q_V" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
     <div class="container">
         <h1>
