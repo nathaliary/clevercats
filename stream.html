@@ -1,6 +1,5 @@
 <!DOCTYPE HTML>
-<html>
-<head>
+<html><head>
   <title>CleverCats</title>	
 	
 
@@ -16,30 +15,69 @@
   color: #000;
 }
 		
-    .custom-cursor {
-      position: absolute;
+  .custom-cursor {
+      position: fixed;
       width: 61px; 
       height: 48px;
-      pointer-events: none; 
+      transform: translate(10%, 10%);
       z-index: 9999; 
-	  transform: translate(0%, 0%);
       background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/24db3350-15d9-4dd5-a9f3-988d171ecdb9/d9ihd70-76c395c9-a555-405c-9286-d627dc9ff634.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI0ZGIzMzUwLTE1ZDktNGRkNS1hOWYzLTk4OGQxNzFlY2RiOVwvZDlpaGQ3MC03NmMzOTVjOS1hNTU1LTQwNWMtOTI4Ni1kNjI3ZGM5ZmY2MzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iXZY04Fv8fZST-fFnwfad1PDhpHFXsfMQkiRy_ke9O8'); 
       background-size: cover;
       background-repeat: no-repeat;
     }
 		
+		.about-content {
+      font-family: 'Poppins', sans-serif;
+      font-size: 22px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 10px;
+      margin: 30px auto;
+      max-width: 800px;
+	  cursor: none;		
+			
+    }
+ 
+    .about-content p {
+      margin-bottom: 20px;
+    }
+ 
+    .about-content h3 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+ 
+    .about-content hr {
+      border: 1px solid #fff; 
+      margin: 20px 0;
+    }
+ 
+    h2 {
+      text-align: center;
+      background: #503F3F;
+      color: white;
+      padding: 20px 0;
+      margin-top: 0;
+    }
+ 
+		
         body {
             margin: 0;
             padding: 0;
-            background: url("https://i.pinimg.com/originals/83/ea/1d/83ea1dbda4cd4af6365d62bf6093b12c.gif") no-repeat top fixed;
+            background: url("https://i.pinimg.com/originals/46/1c/ce/461cce21eba7c92d45b65b0ac9b56435.gif") no-repeat top fixed;
             background-size: cover;
             font-family: 'Poppins', sans-serif;
 			cursor: none !important;
-			display: grid;
+			display: flex;
 			flex-wrap: wrap;
         }
+		
+		
         .container {
-    background: linear-gradient(to bottom, rgba(164, 180, 191, 0.7), rgba(230, 230, 230, 0.7));
+    background: linear-gradient(to bottom, rgba(164, 180, 191, 1), rgba(230, 230, 230, 1));
     background-size: cover;
     color: rgb(55, 52, 52);
     padding-top: 0px;
@@ -50,28 +88,28 @@
     width: 100%;
     min-height: 110px; 
     font-family: 'Fjalla One', sans-serif;
-    border-bottom: 5px solid rgba(123, 125, 124, 0.7);
+    border-bottom: 5px solid rgba(123, 125, 124, 1);
     border-radius: 0 0 15px 15px;
-    display: flex;
     align-items: center;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 1); 
     z-index: 9999;
-    background: inherit;
 	cursor: none;
-		
-}
+	display: flex;
+    position: fixed;
+    }
+}	
+
 
 .gradient-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 110px;
-    z-index: -1; 
-    background: linear-gradient(to bottom, rgba(164, 180, 191, 0.7), rgba(230, 230, 230, 0.7));
+    z-index: -1;
+    /* Remove the background and background-size properties */
     border-radius: 0 0 15px 15px;
-		cursor: none;
-
+    cursor: none;
 }
 
 .container h1 img {
@@ -99,9 +137,16 @@
             padding: 50px;      
             padding-left: 60px;
 			font-size: 20px;
-				cursor: none;
-
+				cursor: none; 
 }
+		
+		.container ul {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+		
         .content-text {
     font-size: 18px;
     line-height: 1.5;
@@ -109,8 +154,6 @@
     font-weight: bold; 
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3); 
 				cursor: none;
-    text-align: center;
-			
 }
 
         .bold{
@@ -175,8 +218,8 @@ ul li {
 ul li a {
     display: block;
     text-transform: uppercase;
-    margin: 0 30px;
-    padding: 8px 120px;
+    margin: 0 10px;
+    padding: 8px 22px;
     position: relative;
     text-decoration: none;
     color: #726565;
@@ -289,7 +332,7 @@ ul li a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("https://i.pinimg.com/564x/e1/aa/a9/e1aaa9f871b1ae77ca93ad0062bc3e45.jpg") no-repeat top fixed;
+  background: url("https://i.pinimg.com/564x/1a/6a/02/1a6a020ba8fdf53fb6c96c6ed0b35f42.jpg") no-repeat top fixed;
   background-size: cover;
   opacity: 0.9;
   z-index: -2;
@@ -340,7 +383,8 @@ ul li a:hover {
 
 .container h1 img {
     pointer-events: none;
-}		
+}	
+	
 	
 .transition-effect {
     opacity: 0;
@@ -349,9 +393,8 @@ ul li a:hover {
 
 .show-content {
     opacity: 1;
-}	
-		
-    /* back */
+}			
+	
 ul oo {
     margin: 0;
 }
@@ -359,7 +402,7 @@ ul oo {
 ul oo a {
     display: block;
     text-transform: uppercase;
-    margin: 0 350px;
+    margin: 0 10px;
     padding: 8px 22px;
     position: relative;
     text-decoration: none;
@@ -376,12 +419,249 @@ ul oo a:hover {
     color: #425CB9;
 	cursor: none;
 }
+	
+		
+			.bts1 {
+	position: absolute;
+    bottom: 442px;
+    right: 92px;
+				z-index: 1;
+		}		
+		
+		.bts1 img{
+	width: 485px;
+    height: 90px;
+	border-radius: 16px;
+		
+}	
+
+		.bts1 img:hover {
+	transform: scale(1.1);
+			cursor: none;
+		}		
+		
+		
+.image-container {
+    position: absolute;
+    bottom: 170px;
+    right: 50px;
+}
+
+.image-container img {
+    width: 500px;
+    height: 300px;
+	border-radius: 15px;
+}
+		
+.image-container img:hover {
+    transform: scale(1.1);
+}
+	
+.image2-container {
+    position: absolute;
+    bottom: -75px;
+    right: 20px;
+}
+
+.image2-container img {
+    width: 400px;
+    height: 300px;
+	border-radius: 15px;
+}
+		
+.image2-container img:hover {
+    transform: scale(1.1);
+}
+	
+.image3-container {
+    position: absolute;
+    bottom: -390px;
+    right: 50px;
+}
+
+.image3-container img {
+    width: 500px;
+    height: 300px;
+	border-radius: 15px;
+}
+		
+.image3-container img:hover {
+    transform: scale(1.1);
+}
+
+		.instagram {
+	position: absolute;
+    bottom: -572px;
+    right: 395px;
+		}		
+		
+		.instagram img{
+	width: 60px;
+    height: 60px;
+	border-radius: 15px;
+			box-shadow: -1px 4px 7px rgba(0, 0, 0, 0.4);
+			cursor: none;
+}	
+
+		.instagram img:hover {
+	transform: scale(1.1);
+			cursor: none;
+		}
+
+		.text {
+			position: absolute;
+					font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial;
+		width: 90px;
+    height: 67px;	
+    bottom: -722px;
+    right: 230px;
+			font-size: 32px;
+         font-weight: 500;
+			text-shadow: -1px 4px 7px rgba(255,255,255, 0.4)
+		}
+		
     
+    
+		
+		.yt {
+	position: absolute;
+    bottom: -645px;
+    right: 392px;
+    cursor: none;
+
+		}		
+		
+		.yt img{
+	cursor: none;
+	width: 65px;
+    height: 50px;
+	border-radius: 16px;
+			box-shadow: -1px 4px 7px rgba(0, 0, 0, 0.4)
+}	
+
+		.yt img:hover {
+	transform: scale(1.1);
+			cursor: none;
+		}
+
+		.text2 {
+			position: absolute;
+			font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial;
+		width: 90px;
+    height: 79px;	
+    bottom: -811px;
+    right: 230px;
+			font-size: 32px;
+font-weight: 500;
+			text-decoration-color: white;
+			text-shadow: -1px 4px 7px rgba(255,255,255, 0.4)
+		}
+	
+  
+  
+  
+  		.facebook {
+	position: absolute;
+    bottom: -718px;
+    right: 395px;
+		}		
+		
+		.facebook img{
+	width: 60px;
+    height: 60px;
+	border-radius: 15px;
+			box-shadow: -1px 4px 7px rgba(0, 0, 0, 0.4);
+			cursor: none;
+}	
+
+		.facebook img:hover {
+	transform: scale(1.1);
+			cursor: none;
+		}
+
+		.text3 {
+			position: absolute;
+					font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial;
+		width: 90px;
+    height: 67px;	
+    bottom: -866px;
+    right: 230px;
+			font-size: 32px;
+         font-weight: 500;
+			text-shadow: -1px 4px 7px rgba(255,255,255, 0.4)
+		}
+		
+  
+	.border {
+	position: absolute;
+    bottom: -470px;
+    right:  52px;
+		transform: translateX(10%, 10%);
+		padding-left: 1000px;
+		overflow: hidden;
+		}		
+		
+		.border img{
+	width: 500px;
+    height: 20px;
+	overflow: hidden;
+
+	
+}	
+		
+#backToTopBtn {
+    position: absolute;
+    bottom: -775px;
+    right: 210px;
+    width: 175px;
+    height: 60px;
+    border-radius: 7px;
+    box-shadow: -1px 4px 7px rgba(255, 255, 255, 0.4);
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: none;
+    background-color: #DADADA;
+}
+		
     </style>
 </head>
 <body>
 
-    <div class="container">
+	<button onclick="scrollToTop()" id="backToTopBtn">Back to the Top</button>
+			
+	<div class="text">
+            <p>@groupclevercats</p>
+        </div>
+		
+  <div class="text2">
+            <p>@clevercats4</p>
+        </div>
+		
+  <div class="text3">
+            <p>@CleverCats</p>
+        </div>
+	
+
+	<div class="instagram custom-font">
+         <a href="https://www.instagram.com/groupclevercats/" target="_blank">
+        <img src="https://pluspng.com/img-png/instagram-png-instagram-png-logo-1455.png" alt="ig">
+    </a>
+    </div>
+	
+	<div class="yt custom-font">
+         <a href="https://www.youtube.com/@clevercats4" target="_blank">
+        <img src="https://clipart.info/images/ccovers/1590430652red-youtube-logo-png-xl.png" alt="yt">
+    </a>
+    </div>
+    
+	<div class="facebook custom-font">
+         <a href="https://www.facebook.com/profile.php?id=61555685048078&mibextid=PlNXYD" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png" alt="fb">
+    </a>
+    </div>
+	
+    <div class="container gradient-overlay">
         <h1>
             <img src="https://64.media.tumblr.com/544f7d96eec320644f0280e7c363a840/566e9d2848afc848-83/s400x600/2053dbff5a925a121527aac72c5b7d866ce933c7.gifv" alt="CleverCats">
         </h1>
@@ -389,11 +669,9 @@ ul oo a:hover {
 
         <ul>
             <oo><a href="index.html">Back</a></oo>
-
-        <ul>
-            <li><a href="#members-section">Members</a></li>
+         <li><a href="#members-section">Members</a></li>
             <li><a href="#credits-section">Credits</a></li>
-        </ul>
+       </ul>
 </div>
 
 <div class="white-container" id="membersContainer">
